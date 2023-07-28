@@ -5,12 +5,12 @@ export interface AssetT{
 }
 
 const AssetsArray : AssetT[] = [
-    // {
-    //     name : "board" , 
-    //     type : "glbmodel",
-    //     path : "/models/newBoard.glb" , 
-    // }
-    // ,
+    {
+        name : "gun" , 
+        type : "glbmodel",
+        path : "/Models/gun.glb" , 
+    }
+    ,
 ]
 
 export default AssetsArray ; 

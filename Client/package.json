@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "events": "^3.3.0",
+    "nipplejs": "^0.10.1",
     "three": "^0.155.0",
     "yuka": "^0.7.8"
   }

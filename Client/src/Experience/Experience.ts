@@ -9,6 +9,8 @@ import Renderer from './Renderer';
 import Helper from './Helper';
 import Controllers from './Controllers';
 
+import World from './World/World';
+
 class Experience{
     static instance : Experience ; 
     canvas : HTMLCanvasElement ; 
@@ -21,6 +23,8 @@ class Experience{
     renderer : Renderer ; 
     helper : Helper ; 
     controllers : Controllers ; 
+
+    world : World ; 
 
     constructor(canvas?: HTMLCanvasElement ){
         if(Experience.instance){
@@ -45,23 +49,36 @@ class Experience{
                 this.resize() ; 
             })
 
+            this.controllers.on('leftMove' , (e)=>{
+                this.leftJoystickdata(e) ; 
+            })
+
             this.time.on('update' , ()=>{
                 this.update() ; 
             })
 
             this.resources.on('ready' , ()=>{
-                console.log('ready') ;
+                this.world = new World() ; 
             })
+        }
+    }
+
+    leftJoystickdata(e:any){
+        if( this.world ){
+            this.world.leftJoystickdata(e);
         }
     }
 
     resize(){
         console.log('resize');
+        if(this.camera)this.camera.resize();
+        if( this.renderer ) this.renderer.resize() ; 
     }
 
     update(){
         this.renderer.update() ;
         if( this.controllers ) this.controllers.update() ;
+        if( this.world ) this.world.update() ; 
     }
 } ; 
 
