@@ -22,9 +22,8 @@
 
 #right-joyStick{
     position: absolute;
-    width: 5cm;
-    height: 5cm;
-    background-color: rgba(255, 0, 0, 0.43);
+    width: 3cm;
+    height: 3cm;
     top: 50%;
     right: 0;
     border-radius: 50%;
