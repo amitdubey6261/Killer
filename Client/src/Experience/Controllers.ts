@@ -106,8 +106,8 @@ class Controllers extends EventEmitter {
 
     createOrbitControlls() {
         this.orbitControls = new OrbitControls(this.camera.perspectiveCamera, this.experience.canvas);
-        this.orbitControls.maxDistance = 10;
-        this.orbitControls.minDistance = 10;
+        this.orbitControls.maxDistance = 100;
+        this.orbitControls.minDistance = 100;
         // this.orbitControls.maxPolarAngle = (Math.PI / 4) * 3;
         this.orbitControls.maxPolarAngle = Math.PI / 2;
         this.orbitControls.minPolarAngle = 0;
