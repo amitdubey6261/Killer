@@ -10,6 +10,7 @@ import Helper from './Helper';
 import Controllers from './Controllers';
 
 import World from './World/World';
+import Environment from './World/Environment';
 
 class Experience{
     static instance : Experience ; 
@@ -18,6 +19,7 @@ class Experience{
     sizes : Sizes ; 
     time : Time ; 
     resources : Resources ; 
+    env : Environment ; 
 
     camera : Camera ;
     renderer : Renderer ; 
@@ -58,6 +60,7 @@ class Experience{
             })
 
             this.resources.on('ready' , ()=>{
+                this.env = new Environment() ; 
                 this.world = new World() ; 
             })
         }

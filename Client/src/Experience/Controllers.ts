@@ -109,7 +109,7 @@ class Controllers extends EventEmitter {
         this.orbitControls.maxDistance = 100;
         this.orbitControls.minDistance = 100;
         // this.orbitControls.maxPolarAngle = (Math.PI / 4) * 3;
-        this.orbitControls.maxPolarAngle = Math.PI / 2;
+        this.orbitControls.maxPolarAngle = Math.PI/2;
         this.orbitControls.minPolarAngle = 0;
         this.orbitControls.autoRotate = false;
         this.orbitControls.autoRotateSpeed = 0;
@@ -117,7 +117,7 @@ class Controllers extends EventEmitter {
         this.orbitControls.enableDamping = false;
         this.orbitControls.dampingFactor = 0.1;
         this.orbitControls.enableZoom = false;
-        this.orbitControls.enablePan = false;
+        this.orbitControls.enablePan = true;
         // this.orbitControls.minAzimuthAngle = - Math.PI / 2; // radians
         // this.orbitControls.maxAzimuthAngle = Math.PI / 4 // radians
     }
