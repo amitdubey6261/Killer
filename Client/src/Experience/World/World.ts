@@ -30,18 +30,12 @@ class World {
     }
 
     leftJoystickdata(e: any) {
-        // this.model.rotation.y = e.angle.radian;
         this.angle = e.angle.radian ; 
         const directionVectorXZ = new THREE.Vector3(
             Math.cos(e.angle.radian),
             0, // Y component is 0 in XZ plane
             Math.sin(e.angle.radian),
         );
-        // const directionVectorXZ = new THREE.Vector3(
-        //     Math.cos(e.angle.radian),
-        //     0, // Y component is 0 in XZ plane
-        //     Math.sin(e.angle.radian)
-        // );
 
         directionVectorXZ.normalize();
 
@@ -100,11 +94,9 @@ class World {
     }
 
     animateBullet(){
-        // this.model.lookAt(this.dv);
-        const speed = .001 ;
-        const velocity = this.dv.clone().multiplyScalar(speed).multiply(new THREE.Vector3( 1 , 0 , -1)) ; 
-        this.model.position.add(velocity.clone().multiplyScalar(this.time.delta)); 
-
+        // const speed = .001 ;
+        // const velocity = this.dv.clone().multiplyScalar(speed).multiply(new THREE.Vector3( 1 , 0 , -1)) ; 
+        // this.model.position.add(velocity.clone().multiplyScalar(this.time.delta)); 
     }
 }
 
